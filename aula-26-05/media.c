@@ -1,6 +1,25 @@
 #include <stdio.h>
 
-void medias(float nota1, float nota2, float nota3, char tipo) {
+void media(float nota1, float nota2, float nota3, char tipo);
+
+int main() {
+    float nota1, nota2, nota3;
+    char tipoMedia;
+
+    printf("Digite a 1º nota:\n");
+    scanf("%f", &nota1);
+    printf("Digite a 2º nota:\n");
+    scanf("%f", &nota2);
+    printf("Digite a 3º nota:\n");
+    scanf("%f", &nota3);
+    printf("Média Aritmética - A\nMédia Ponderada - P.\n");
+    scanf(" %c*[^\n]", &tipoMedia);
+
+    media(nota1, nota2, nota3, tipoMedia);
+}
+
+
+void media(float nota1, float nota2, float nota3, char tipo) {
 
     float media;
 
@@ -18,22 +37,6 @@ void medias(float nota1, float nota2, float nota3, char tipo) {
         default:
            printf("Tipo inválido.\n");
     }
-
 }
 
-int main() {
-    float nota1, nota2, nota3;
-    char tipoMedia;
-
-    printf("Digite a 1º nota:\n");
-    scanf("%f", &nota1);
-    printf("Digite a 2º nota:\n");
-    scanf("%f", &nota2);
-    printf("Digite a 3º nota:\n");
-    scanf("%f", &nota3);
-    printf("Média Aritmética - A\nMédia Ponderada - P.\n");
-    scanf("%s", &tipoMedia);
-
-    medias(nota1, nota2, nota3, tipoMedia);
-
-}
+https://pt.stackoverflow.com/questions/9427/limpeza-do-buffer-do-teclado-ap%C3%B3s-scanf
